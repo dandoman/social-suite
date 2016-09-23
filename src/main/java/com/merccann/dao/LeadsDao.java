@@ -5,12 +5,14 @@ import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.merccann.Lead;
 import com.merccann.dao.mapper.ApiDataMapper;
 import com.merccann.entity.Entity;
+import com.merccann.entity.LeadEntity;
 
 import lombok.Setter;
 
-public class AppDao {
+public class LeadsDao {
 	
 	private static final int PAGE_SIZE = 10;
 	
@@ -30,6 +32,10 @@ public class AppDao {
 
 	public Entity getEntityById(String id) {
 		return apiDataMapper.getEntityById(id).stream().findFirst().orElse(null);
+	}
+
+	public Lead createLead(LeadEntity entity) {
+		return null;
 	}
 
 }

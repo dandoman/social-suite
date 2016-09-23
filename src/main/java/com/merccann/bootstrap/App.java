@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
-import com.merccann.dao.AppDao;
+import com.merccann.dao.LeadsDao;
 import com.merccann.logic.AppLogic;
 
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -47,8 +47,8 @@ public class App {
 	}
 
 	@Bean
-	public AppDao createDao() {
-		return new AppDao();
+	public LeadsDao createDao() {
+		return new LeadsDao();
 	}
 
 	@Bean
